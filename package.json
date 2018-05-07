@@ -1,0 +1,44 @@
+{
+  "author": {
+    "name": "Jeff Levensailor",
+    "email": "jeff@levensailor.com",
+    "url": "https://github.com/levensailor"
+  },
+  "bugs": {
+    "url": "https://github.com/levensailor/node-cisco-ris/issues"
+  },
+  "bundleDependencies": [],
+  "dependencies": {
+    "axios": "^0.17.1",
+    "https": "^1.0.0",
+    "lodash": "^4.17.5",
+    "xml2json": "^0.11.0"
+  },
+  "deprecated": false,
+  "description": "Easy Cisco RIS SDK for Node JS",
+  "devDependencies": {},
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/levensailor/node-cisco-ris",
+  "keywords": [
+    "ris",
+    "cucm",
+    "xml",
+    "json",
+    "soap",
+    "cisco",
+    "callmanager"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "node-cisco-ris",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levensailor/node-cisco-ris.git"
+  },
+  "version": "1.0.6"
+}
