@@ -26,7 +26,7 @@ var logOptions = {
     pass: process.env.LOGPASS
 }
 
-const logz = new LOG(risOptions);
+const logz = new LOG(logOptions);
 
 logz.pull('Cisco CallManager', '5')
 .then(res => {
