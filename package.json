@@ -5,17 +5,21 @@
     "url": "https://github.com/levensailor"
   },
   "bugs": {
-    "url": "https://github.com/levensailor/node-cisco-ris/issues"
+    "url": "https://github.com/levensailor/node-cisco-logs/issues"
   },
   "bundleDependencies": [],
   "dependencies": {
     "axios": "^0.17.1",
+    "formidable": "^1.2.1",
     "https": "^1.0.0",
     "lodash": "^4.17.5",
+    "mailparser": "^2.2.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
     "xml2json": "^0.11.0"
   },
   "deprecated": false,
-  "description": "Easy Cisco RIS SDK for Node JS",
+  "description": "Easy Cisco LogCollection SDK for Node JS",
   "devDependencies": {},
   "directories": {
     "lib": "./lib"
@@ -23,7 +27,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "https://github.com/levensailor/node-cisco-ris",
+  "homepage": "https://github.com/levensailor/node-cisco-logs",
   "keywords": [
     "ris",
     "cucm",
@@ -35,10 +39,10 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "node-cisco-ris",
+  "name": "node-cisco-logs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/levensailor/node-cisco-ris.git"
+    "url": "git+https://github.com/levensailor/node-cisco-logs.git"
   },
-  "version": "1.0.6"
+  "version": "1.0.0"
 }

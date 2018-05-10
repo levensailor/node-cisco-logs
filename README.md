@@ -1,34 +1,34 @@
-node-cisco-ris
+node-cisco-logs
 ===========
 
-Cisco Unified Communications Manager has been the gold standard in enterprise unified communication for years, but using it's Realtime Information Service or RIS toolkit can be a beast. It changes frequently, uses SOAP rather than REST, and returns XML not JSON. 
+Cisco Unified Communications Manager has been the gold standard in enterprise unified communication for years, but using it's LogCollection API can be a beast. It changes frequently, uses SOAP rather than REST, and returns XML not JSON. 
 
-The goal of this project is to make it easier for people to use RIS, focusing on top use cases, not all functions! 
+The goal of this project is to make it easier for people to use LOGS, focusing on top use cases, not all functions! 
 
-[Cisco Developer Docs for RisPort](https://developer.cisco.com/site/sxml/discover/overview/risport/)
+[Cisco Developer Docs for LogCollection](https://developer.cisco.com/site/sxml/documents/api-reference/log-collection/)
 
 Installation
 ============
 
-`npm install node-cisco-ris`
+`npm install node-cisco-logs`
 
 Usage
 =====
 
-Require RIS, add options, and pass options as new object:
+Require LOGS, add options, and pass options as new object:
 
 ```javascript
-var RIS = require('node-cisco-ris');
+var LOG = require('node-cisco-logs');
 
-var risOptions = {
+var logOptions = {
     host: process.env.CUCM,
-    user: process.env.RISUSER,
-    pass: process.env.RISPASS
+    user: process.env.LOGUSER,
+    pass: process.env.LOGPASS
 }
 
-const ris = new RIS(risOptions);
+const logz = new LOG(risOptions);
 
-ris.getIP('SEP00C1B1E46160')
+logz.pull('Cisco CallManager', '5')
 .then(res => {
     console.log(res)
 });
@@ -42,3 +42,4 @@ You can find me on Cisco Spark: jlevensailor@presidio.com
 But if you know you really found a bug, feel free to open an issue instead.
 # node-cisco-axl
 # node-cisco-ris
+# node-cisco-logs

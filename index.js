@@ -1,1 +1,1 @@
-module.exports = require('./lib/cisco-ris');
+module.exports = require('./lib/cisco-logs');
