@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DimeGetFileService" targetNamespace="http://cisco.com/ccm/serviceability/soap/LogCollection/GetFile/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cisco.com/ccm/serviceability/soap/LogCollection/GetFile/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!--=====================================================                                                   
+                   XML Schemas                       
+    ======================================================-->
+
+	 <types>
+
+		  <schema elementFormDefault="qualified" targetNamespace="http://cisco.com/ccm/serviceability/soap/LogCollection/GetFile/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+			   <simpleType name="FileName">
+
+				    <restriction base="string"/>
+
+			   </simpleType>
+
+		  </schema>
+
+	 </types>
+
+	<!--=====================================================                                                   
+    	<                   Message definitions                                                                
+    	<======================================================-->
+
+	<!-- Messages used by RisPortType -->
+
+	<!-- R1. GetOneFileInput-->
+
+	 <message name="GetOneFileInput">
+
+		  <part name="FileName" type="tns:FileName"/>
+
+	 </message>
+
+	 <message name="GetOneFileOutput"/>
+
+	<!--=====================================================                                 
+    	<                   PortType definitions                                                                
+    	<======================================================-->
+
+	 <portType name="GetFilePortType">
+
+		<!-- R1. DIME GetOneFile-->
+
+		  <operation name="GetOneFile">
+
+			   <input message="tns:GetOneFileInput"/>
+
+			   <output message="tns:GetOneFileOutput"/>
+
+		  </operation>
+
+	 </portType>
+
+	<!--=====================================================                                                   
+    	<                   Binding definitions                                                                     
+    	<======================================================-->
+
+	 <binding name="GetFileBinding" type="tns:GetFilePortType">
+
+		<!-- uses UTF-8 encoding    -->
+
+		<!-- uses rpc style         -->
+
+		<!-- uses http transport    -->
+
+		  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+		<!-- R1. GetOneFile-->
+
+		  <operation name="GetOneFile">
+
+			   <soap:operation soapAction="http://schemas.cisco.com/ast/soap/action/#LogCollectionPort#GetOneFile"/>
+
+			   <input>
+
+				    <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://schemas.cisco.com/ast/soap/" use="encoded"/>
+
+			   </input>
+
+			   <output>
+
+				    <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://schemas.cisco.com/ast/soap/" use="encoded"/>
+
+			   </output>
+
+		  </operation>
+
+	 </binding>
+
+	<!--=====================================================                                                
+    	<                   Service definitions                                                                    
+       <======================================================-->
+
+	 <service name="DimeGetFileService">
+
+		  <port binding="tns:GetFileBinding" name="GetFilePort">
+
+			   <soap:address location="https://10.144.200.10:8443/logcollectionservice/services/DimeGetFileService"/>
+
+		  </port>
+
+	 </service>
+
+</definitions>

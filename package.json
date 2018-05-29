@@ -10,12 +10,17 @@
   "bundleDependencies": [],
   "dependencies": {
     "axios": "^0.17.1",
+    "buffer-split": "^1.0.0",
     "formidable": "^1.2.1",
     "https": "^1.0.0",
+    "ip": "^1.1.5",
     "lodash": "^4.17.5",
     "mailparser": "^2.2.0",
     "request": "^2.85.0",
     "request-promise": "^4.2.2",
+    "ssh2": "^0.6.1",
+    "strong-soap": "^1.9.0",
+    "ws.js": "^2.0.23",
     "xml2json": "^0.11.0"
   },
   "deprecated": false,
